@@ -42,7 +42,7 @@ const timer = {
         return;
       }
       const time = convertMs(deltaTime);
-      updateClockface(time);
+      updateClock(time);
     }, 1000);
   },
 };
@@ -67,7 +67,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 };
 
-function updateClockface({ days, hours, minutes, seconds }) {
+function updateClock({ days, hours, minutes, seconds }) {
   refs.days.textContent = `${days}`;
   refs.hours.textContent = `${hours}`;
   refs.minutes.textContent = `${minutes}`;
